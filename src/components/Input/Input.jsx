@@ -2,7 +2,7 @@ import React from "react";
 import InputField from "../InputField/InputField";
 import Button from "../Button/Button";
 
-function Input() {
+function Input(props) {
 	return (
 		<div className="row">
 			<div className={`col s12 m10 offset-m1`}>
@@ -13,6 +13,8 @@ function Input() {
 								type="text"
 								placeholder="Ex. Call plumber."
 								name="todoItem"
+								value={props.value}
+								onChange={props.onChange}
 							/>
 						</div>
 						<div className={`col s4 center`}>
@@ -21,6 +23,7 @@ function Input() {
 								name="submit"
 								class="btn btn-medium white blue-text"
 								innerHTML="Add"
+								onClick={props.onClick}
 							/>
 						</div>
 					</div>
