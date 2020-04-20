@@ -8,7 +8,6 @@ function InputField(props) {
 				name={props.name}
 				placeholder={props.placeholder}
 			/>
-			<label htmlFor={props.name}>Todo:</label>
 		</div>
 	);
 }
