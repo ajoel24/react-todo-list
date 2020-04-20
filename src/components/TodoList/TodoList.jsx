@@ -2,8 +2,10 @@ import React from "react";
 
 function TodoList() {
 	return (
-		<ul>
-			<li>Hello</li>
+		<ul className={`collection with-header`}>
+			<li className="collection-header">
+				<h5>Your Todos:</h5>
+			</li>
 		</ul>
 	);
 }
