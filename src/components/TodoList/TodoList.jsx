@@ -3,7 +3,15 @@ import ListItem from "../ListItem/ListItem";
 
 function TodoList(props) {
 	function createListItem(todo, index) {
-		return <ListItem todo={todo} key={index} id={index} />;
+		return (
+			<ListItem
+				todo={todo}
+				key={index}
+				id={index}
+				check={props.check}
+				onCheckboxClick={props.onCheckboxClick}
+			/>
+		);
 	}
 
 	return (
