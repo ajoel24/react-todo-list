@@ -3,7 +3,7 @@ import React from "react";
 function Input() {
 	return (
 		<div className="row">
-			<div classname={`col s12`}>
+			<div className={`col s12 m10 offset-m1`}>
 				<form>
 					<div className={`row`}>
 						<div className={`col s8`}>
@@ -14,9 +14,12 @@ function Input() {
 							/>
 							<label htmlFor="todoItem">Todo:</label>
 						</div>
-						<div className={`col s4`}>
-							<button className={`btn btn-small`} type="submit">
-								Add
+						<div className={`col s4 center`}>
+							<button
+								className={`btn btn-medium white blue-text`}
+								type="submit"
+							>
+								<b>Add</b>
 							</button>
 						</div>
 					</div>
