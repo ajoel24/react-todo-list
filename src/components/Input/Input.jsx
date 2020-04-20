@@ -16,7 +16,12 @@ function Input() {
 							/>
 						</div>
 						<div className={`col s4 center`}>
-							<Button type="submit" name="submit" innerHTML="Add" />
+							<Button
+								type="submit"
+								name="submit"
+								class="btn btn-medium white blue-text"
+								innerHTML="Add"
+							/>
 						</div>
 					</div>
 				</form>
