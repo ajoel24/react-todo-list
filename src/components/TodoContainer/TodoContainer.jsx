@@ -1,4 +1,5 @@
 import React from "react";
+import Input from "../Input/Input";
 
 function TodoContainer() {
 	return (
@@ -7,7 +8,7 @@ function TodoContainer() {
 				<div className={`row`}>
 					<div className={`col s10 offset-s1 m10 offset-m1 l8 offset-l2`}>
 						<div className={`card-panel blue white-text`}>
-							<h1>Hello</h1>
+							<Input />
 						</div>
 					</div>
 				</div>
