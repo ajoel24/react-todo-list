@@ -1,8 +1,9 @@
 import React from "react";
+import "./Footer.css";
 
 function Footer() {
 	return (
-		<footer>
+		<footer className={`page-footer`}>
 			<h6>&copy;{new Date().getFullYear()}. All rights reserved.</h6>
 			<h6>Developed with 🤍 by Andrew.</h6>
 		</footer>
