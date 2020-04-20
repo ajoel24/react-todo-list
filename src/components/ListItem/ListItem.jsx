@@ -1,11 +1,13 @@
 import React from "react";
 
-function ListItem() {
+function ListItem(props) {
 	return (
 		<li>
-			<input type="checkbox" />
-			Hello
-			<button>x</button>
+			<input type="checkbox" id={props.id} />
+			<span>{props.todo}</span>
+			<a className="secondary-content">
+				<button>x</button>
+			</a>
 		</li>
 	);
 }

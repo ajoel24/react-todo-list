@@ -33,7 +33,7 @@ function TodoContainer() {
 					</div>
 					<div className={`row`}>
 						<div className={`col s10 offset-s1 m10 offset-m1 l8 offset-l2`}>
-							<TodoList />
+							<TodoList list={todos} />
 						</div>
 					</div>
 				</div>
