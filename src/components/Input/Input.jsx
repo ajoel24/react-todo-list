@@ -1,4 +1,5 @@
 import React from "react";
+import InputField from "../InputField/InputField";
 
 function Input() {
 	return (
@@ -7,12 +8,11 @@ function Input() {
 				<form>
 					<div className={`row`}>
 						<div className={`col s8`}>
-							<input
+							<InputField
 								type="text"
+								placeholder="Ex. Call plumber."
 								name="todoItem"
-								placeholder="Example: Buy water"
 							/>
-							<label htmlFor="todoItem">Todo:</label>
 						</div>
 						<div className={`col s4 center`}>
 							<button
