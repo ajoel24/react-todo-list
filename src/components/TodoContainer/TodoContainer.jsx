@@ -11,9 +11,10 @@ function TodoContainer() {
 	}
 
 	function getTodoItem(e) {
-		setTodos((prevValues) => {
-			return [...prevValues, todoItem];
-		});
+		todoItem.length > 0 &&
+			setTodos((prevValues) => {
+				return [...prevValues, todoItem];
+			});
 		setTodoItem("");
 		e.preventDefault();
 	}

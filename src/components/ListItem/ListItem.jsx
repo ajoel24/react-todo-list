@@ -19,7 +19,12 @@ function ListItem(props) {
 				<input type="checkbox" onClick={toggleStrike} />
 				<span style={listStyle}>{props.todo}</span>
 				<a className="secondary-content">
-					<button onClick={() => props.onChecked(props.id)}>x</button>
+					<button
+						class="red white-text"
+						onClick={() => props.onChecked(props.id)}
+					>
+						x
+					</button>
 				</a>
 			</label>
 		</li>
