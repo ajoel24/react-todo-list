@@ -32,7 +32,7 @@ function TodoContainer() {
 				<div className={`card-panel white black-text`}>
 					<div className={`row`}>
 						<div className={`col s10 offset-s1 m10 offset-m1 l8 offset-l2`}>
-							<h5>Add a task:</h5>
+							<h5 className={`col l10 offset-l1 m10 offset-m1`}>Add a task:</h5>
 							<Input
 								value={todoItem}
 								onChange={changeTodoItem}
