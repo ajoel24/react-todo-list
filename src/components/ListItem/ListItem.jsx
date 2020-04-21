@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
 function ListItem(props) {
+	const [strike, setStrike] = useState(false);
+
+	function toggleStrike() {
+		setStrike(!strike);
+	}
+
 	const listStyle = {
-		textDecorationLine: props.check ? "line-through" : "none",
+		textDecoration: strike ? "line-through" : "none",
+		fontWeight: !strike && "bold",
+		color: "#000",
 	};
+
 	return (
 		<li>
 			<label>
-				<input type="checkbox" id={props.id} />
+				<input type="checkbox" onClick={toggleStrike} />
 				<span style={listStyle}>{props.todo}</span>
 				<a className="secondary-content">
-					<button>x</button>
+					<button onClick={() => props.onChecked(props.id)}>x</button>
 				</a>
 			</label>
 		</li>

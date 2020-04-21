@@ -5,7 +5,6 @@ import TodoList from "../TodoList/TodoList";
 function TodoContainer() {
 	const [todoItem, setTodoItem] = useState("");
 	const [todos, setTodos] = useState([]);
-	const [strike, setStrike] = useState(false);
 
 	function changeTodoItem(e) {
 		setTodoItem(e.target.value);
@@ -15,12 +14,18 @@ function TodoContainer() {
 		setTodos((prevValues) => {
 			return [...prevValues, todoItem];
 		});
+		setTodoItem("");
 		e.preventDefault();
 	}
 
-	function toggleStrike() {
-		setStrike(!prevValue);
+	function deleteItem(id) {
+		setTodos((prevValues) => {
+			return prevValues.filter((todo, index) => {
+				return index !== id;
+			});
+		});
 	}
+
 	return (
 		<main>
 			<div className={`container`}>
@@ -36,11 +41,9 @@ function TodoContainer() {
 					</div>
 					<div className={`row`}>
 						<div className={`col s10 offset-s1 m10 offset-m1 l8 offset-l2`}>
-							<TodoList
-								list={todos}
-								check={strike}
-								onCheckboxClick={toggleStrike}
-							/>
+							{todos.length > 0 && (
+								<TodoList list={todos} onChecked={deleteItem} />
+							)}
 						</div>
 					</div>
 				</div>

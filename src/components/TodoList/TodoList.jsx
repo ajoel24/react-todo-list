@@ -8,8 +8,7 @@ function TodoList(props) {
 				todo={todo}
 				key={index}
 				id={index}
-				check={props.check}
-				onCheckboxClick={props.onCheckboxClick}
+				onChecked={props.onChecked}
 			/>
 		);
 	}
